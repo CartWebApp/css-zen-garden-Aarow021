@@ -1,11 +1,18 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
+@import url('https://fonts.googleapis.com/css?family=Adamina');
+
+:root {
+    --blue: #0A3161;
+    --red: #B31942;
+}
+
 body {
     background-color: #FAF9F6;
 }
 
 .page-wrapper::before {
-    border: solid 5px #0A3161;
+    border: solid 5px var(--blue);
     content: "";
     position: absolute;
     top: 3px;
@@ -18,17 +25,24 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border: solid 5px #B31942;
+    border: solid 5px var(--red);
     position: relative;
     padding: 20px;
     max-width: 1440px;
     margin: auto;
 }
 
-h1 {
-    align-self: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Adamina';
+    width: fit-content;
     text-align: center;
+    margin: auto;
 }
 
+header {
+    margin: auto;
+    width: 90%;
+    align-self: center;
+    color:var(--blue);
+}
 
-/*center parent of h1*/
