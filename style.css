@@ -1,6 +1,7 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
 @import url('https://fonts.googleapis.com/css?family=Adamina');
+@import url('https://fonts.googleapis.com/css?family=Commissioner');
 
 :root {
     --blue: #0A3161;
@@ -37,6 +38,29 @@ h1, h2, h3, h4, h5, h6 {
     width: fit-content;
     text-align: center;
     margin: auto;
+    height: fit-content;
+}
+
+h1 {
+    font-size: 5rem;
+    /* background-image: url("images/tildas.png");
+    background-size: contain;
+    background-repeat: no-repeat; */
+    background: url("images/tilda.png") right center no-repeat, url("images/tilda.png") left center no-repeat;
+    width: 100%;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p, li, a {
+    font-family: 'Commissioner';
+    font-size: 1.5rem;
 }
 
 header {
@@ -46,3 +70,32 @@ header {
     color:var(--blue);
 }
 
+ .page-wrapper > *{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+    }    
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p, li, a {
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media (max-width: 1150px) and (min-width: 1001px) {
+    h1 {
+        font-size: 4rem;
+    }  
+    
+    h2 {
+        font-size: 2.8rem;
+    }
+}
