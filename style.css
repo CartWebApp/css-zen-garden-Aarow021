@@ -37,17 +37,50 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Adamina';
     width: fit-content;
     text-align: center;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     height: fit-content;
 }
 
+[role=banner] {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    position: relative;
+    height: 75em;
+}
+
+header h2::before {
+    content: "I WANT YOU \A TO USE CSS\A\A";
+    white-space: pre;
+    text-shadow:
+    1.3px 1.3px 0 var(--red),
+    -1.3px 1.3px 0 var(--red),
+    -1.3px -1.3px 0 var(--red),
+    1.3px -1.3px 0 var(--red);
+}
+
+header h2 {
+    
+}
 h1 {
     font-size: 5rem;
-    /* background-image: url("images/tildas.png");
-    background-size: contain;
-    background-repeat: no-repeat; */
     background: url("images/tilda.png") right center no-repeat, url("images/tilda.png") left center no-repeat;
     width: 100%;
+}
+
+[role=banner] h1::after {
+    content: "";
+    background-image: url(images/sam-hd.png);
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-repeat: no-repeat;
+    background-size : contain;
+    height: calc(696px);
+    width: calc(497px);
 }
 
 h2 {
@@ -70,7 +103,7 @@ header {
     color:var(--blue);
 }
 
- .page-wrapper > *{
+ .page-wrapper > * {
     margin-left: 10%;
     margin-right: 10%;
 }
