@@ -20,6 +20,7 @@ body {
     left: 3px;
     right: 3px;
     bottom: 3px;
+    z-index: -999;
 }
 
 .page-wrapper {
@@ -60,9 +61,20 @@ header h2::before {
     1.3px -1.3px 0 var(--red);
 }
 
-header h2 {
-    
+abbr {
+    color: var(--blue)
 }
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
 h1 {
     font-size: 5rem;
     background: url("images/tilda.png") right center no-repeat, url("images/tilda.png") left center no-repeat;
@@ -106,6 +118,11 @@ header {
  .page-wrapper > * {
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.summary:last-child {
+    margin-top: 0;
+    color:red;
 }
 
 @media (max-width: 1000px) {
