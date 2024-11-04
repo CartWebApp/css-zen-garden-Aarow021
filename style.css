@@ -2,24 +2,30 @@
 
 @import url('https://fonts.googleapis.com/css?family=Adamina');
 @import url('https://fonts.googleapis.com/css?family=Commissioner');
+@import url('https://fonts.googleapis.com/css?family=Inter');
 
 :root {
     --blue: #0A3161;
     --red: #B31942;
 }
 
+*::before, *::after {
+    z-index: -998;
+}
+
+
 body {
     background-color: #FAF9F6;
 }
 
 .page-wrapper::before {
-    border: solid 5px var(--blue);
+    border: solid 10px var(--blue);
     content: "";
     position: absolute;
-    top: 3px;
-    left: 3px;
-    right: 3px;
-    bottom: 3px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
     z-index: -999;
 }
 
@@ -27,12 +33,27 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border: solid 5px var(--red);
+    border: solid 10px var(--red);
     position: relative;
     padding: 20px;
     max-width: 1440px;
     margin: auto;
 }
+
+.page-wrapper > * {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.main.supporting {
+    order: 1;
+}
+
+.main.supporting > * {
+    margin-top: 5rem;
+}
+
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Adamina';
@@ -54,11 +75,13 @@ h1, h2, h3, h4, h5, h6 {
 header h2::before {
     content: "I WANT YOU \A TO USE CSS\A\A";
     white-space: pre;
+    font-family: 'Inter';
+    font-size: 5rem;
     text-shadow:
-    1.3px 1.3px 0 var(--red),
-    -1.3px 1.3px 0 var(--red),
-    -1.3px -1.3px 0 var(--red),
-    1.3px -1.3px 0 var(--red);
+    1.4px 1.4px 0 var(--red),
+    -1.4px 1.4px 0 var(--red),
+    -1.4px -1.4px 0 var(--red),
+    1.4px -1.4px 0 var(--red);
 }
 
 abbr {
@@ -101,6 +124,7 @@ h2 {
 
 h3 {
     font-size: 2rem;
+    color: var(--blue)
 }
 
 p, li, a {
@@ -115,16 +139,219 @@ header {
     color:var(--blue);
 }
 
- .page-wrapper > * {
-    margin-left: 10%;
-    margin-right: 10%;
+.summary p {
+    display: inline;
+    margin: 0;
 }
 
-.summary:last-child {
+.preamble {
+    position: relative;
+    border: 100px solid transparent;
+    background-repeat: repeat;
+    border-image: url(images/stars-border.svg);
+    border-image-slice: 50%;
+    margin-top: 5rem;
+    
+}
+
+.preamble h3 {
+    margin-top: 1rem;
+}
+
+.preamble h3::before {
+    width: calc(100% + 90px);
+    height: calc(100% + 76px);
+    left: -55px;
+    top: -48px;
+    content: "";
+    position: absolute;
+    border: 10px solid var(--red);
+    z-index: -1;
+}
+
+
+
+
+
+aside {
+    margin-top: 5em;
+}
+
+.wrapper > * {
+    border-image: url(images/border-dashed.png) 1 round;
+    border-style: dashed;
+    border-image-repeat: repeat;
+    border-image-slice: 5%;
+    padding: 2em;
+}
+
+.design-selection ul {
+    columns: 2;
+    column-gap: 2em;
+
+    li {
+        margin-bottom: 1rem;
+    }
+
+    a:last-child {
+        color: var(--blue);
+    }
+}
+
+.design-archives {
+    border-top: solid 0px transparent;
+    border-bottom: solid 0px transparent;
+
+}
+
+.wrapper h3 {
     margin-top: 0;
+}
+
+
+
+
+.explanation p:first-of-type, .explanation p:last-of-type {
+    position: relative;
+}
+
+.explanation p:first-of-type::before {
+    border-top: solid 5px var(--blue);
+    content: "";
+    position: absolute;
+    top: -1.2rem;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.explanation p:first-of-type::after {
+    border-top: solid 5px var(--red);
+    content: "";
+    position: absolute;
+    top: calc(-1.2rem - 8px);
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.explanation p:last-of-type::before {
+    border-bottom: solid 5px var(--blue);
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: -1.2rem;
     color:red;
 }
 
+.explanation p:last-of-type::after {
+    border-bottom: solid 5px var(--red);
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: calc(-1.2rem - 8px);
+}
+
+#zen-participation {
+    margin-top: calc(154px + 5em + 8px);
+}
+
+.participation {
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.participation::before {
+    border: solid 5px var(--blue);
+    content: "";
+    position: absolute;
+    top: calc(1em + 8px);
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+}
+
+.participation::after {
+    border: solid 5px var(--red);
+    content: "";
+    position: absolute;
+    top: calc(1em);
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.participation h3 {
+    background-color: #FAF9F6;
+    color: var(--red)
+}
+
+.participation p::before {
+    position: absolute;
+    background-image: url(images/star_blue.svg), url(images/star_red.svg), url(images/star_blue.svg);
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: calc(-154px - 2rem);
+    left: 0px;
+    right: 0px;
+    background-position: left top, center top, right top;
+    background-repeat: no-repeat;
+}
+
+.benefits {
+    position: relative;
+    padding: 0 2rem 0.5rem 2rem;
+    border: solid 5px var(--red);
+    border-top: transparent;
+    border-bottom: transparent;
+}
+
+.benefits::before {
+    border: solid 5px var(--blue);
+    border-top: transparent;
+    border-bottom: transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    right: 3px;
+    bottom: 0;
+}
+
+.benefits h3 {
+    position: relative;
+}
+
+.benefits h3::before {
+    position: absolute;
+    background-image: url(images/tildas_red-blue.svg);
+    content: "";
+    width: 64px;
+    height: 45px;
+    top: 0px;
+    left: -5rem;
+    bottom: 0px;
+    background-repeat: no-repeat;
+}
+
+.benefits h3::after {
+    position: absolute;
+    background-image: url(images/tildas_red-blue.svg);
+    content: "";
+    width: 64px;
+    height: 45px;
+    top: 0px;
+    right: -5rem;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+}
 @media (max-width: 1000px) {
     h1 {
         font-size: 3rem;
