@@ -165,9 +165,9 @@ header {
 
 .preamble h3::before {
     width: calc(100% + 90px);
-    height: calc(100% + 76px);
+    height: calc(100% + 75px);
     left: -55px;
-    top: -48px;
+    top: -47px;
     content: "";
     position: absolute;
     border: 10px solid var(--red);
